@@ -32,7 +32,6 @@
 
 @endsection
  
-
 @section('content')
 
 <form method="post" action="{{ route('update-profile') }}" enctype="multipart/form-data">
@@ -89,7 +88,7 @@
 
   <p> Gambar Max. 2 MB </p>
   
-  @endif
+@endif
   
 
 </div>

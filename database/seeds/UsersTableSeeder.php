@@ -15,10 +15,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('tbl_user')->insert([
-            'username' => 'rifan',
-            'email' => Str::random(10).'@gmail.com',
-            'password' => Hash::make('Jember123'),
-            'full_name' => Str::random(10),
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin1234'),
+            'full_name' => 'Super Admin Creator',
             'status' => 10,
             'account_type' => 10
         ]);

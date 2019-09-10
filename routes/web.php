@@ -35,3 +35,12 @@ Route::post('/user/store', ['as'=>'store-user', 'uses' => 'UserController@store'
 Route::get('/user/create', ['as'=>'create-user', 'uses' => 'UserController@create']);
 Route::post('/user/update-password', ['as'=>'update-password-user', 'uses' => 'UserController@updatePassword']);
 Route::post('/user/delete', ['as'=>'delete-user', 'uses' => 'UserController@delete']);
+
+// Data
+Route::get('/home/index', ['as'=>'home-data', 'uses' => 'HomeController@index']);
+Route::get('/home/create', ['as'=>'create-data', 'uses' => 'HomeController@create']);
+Route::get('/home/update/{iduser}', ['as'=>'update-data', 'uses' => 'HomeController@update']);
+Route::post('/home/store', ['as'=>'store-data', 'uses' => 'HomeController@store']);
+Route::post('/home/delete', ['as'=>'delete-data', 'uses' => 'HomeController@delete']);
+Route::post('/home/do-update', ['as'=>'do-update-data', 'uses' => 'HomeController@doUpdate']);
+Route::post('/home/delete-image', ['as'=>'delete-image-data', 'uses' => 'HomeController@deleteImage']);

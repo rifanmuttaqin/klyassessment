@@ -46,7 +46,6 @@ class ProfileController extends Controller
     public function index(Request $request)
     {
     	$data_user = Auth::user();
-
         return view('profile.index', ['active'=>'profile', 'data_user'=>$data_user]);
     }
 
@@ -111,7 +110,6 @@ class ProfileController extends Controller
                     return $this->getResponse(false,400,null,'Password gagal diupdate');
                 }
 
-                
                 DB::commit();
                 return $this->getResponse(true,200,'','Password berhasil diupdate');
             }
@@ -143,7 +141,7 @@ class ProfileController extends Controller
             }
                     
             DB::rollBack();
-            return $this->getResponse(false,400,'','Gambar gagal berhasil dihapus');
+            return $this->getResponse(false,400,'','Gambar gagal dihapus');
         }
     }
 }
